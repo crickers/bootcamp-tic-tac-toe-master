@@ -63,6 +63,7 @@ body {
   .restart:hover {
     background: #FF8C94;
     color: white;
+    border: 2px solid white;
   }
   
   .game {
@@ -95,7 +96,7 @@ body {
 
   .player-o.active {
     color: #4c6986;
-    border-color: #D7BAFB;
+    border-color:#42BED7;
   }
 
   .player-o {
@@ -103,7 +104,21 @@ body {
     border-bottom: 5px solid #eee;
     padding-bottom: 8px;
   }
-     
+   
+  .player-x, .player-o {
+    flex: 1;
+    border: 4px solid #EAF2FF;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    padding: 10px 20px;
+    margin: 4px;
+    border-radius: 50pc;
+    text-align: center;
+    
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+  
   .header__status {
     padding: 12px;
     flex-grow: 1;
@@ -130,12 +145,15 @@ body {
   }
   
   .board__tile {
-    background: white;
+    border-radius: 10px;
+    border: 4px solid #DCEDC2;
+    transition: all 0.2s ease;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
   }
 
   .tile-x {
@@ -143,22 +161,23 @@ body {
   }
 
   .tile-o {
-    color: #FF8C94;
+    color: #ffffff;
   }
   
   .board__tile:not(:nth-child(3n)) {
-    border-right: 3px solid rgba(137, 163, 189, 0.58);
+    border-right: 5px solid #4c6986;
   }
   
   .board__tile:not(:nth-last-child(-n + 3)) {
-    border-bottom: 3px solid rgba(137, 163, 189, 0.58);
+    border-bottom: 5px solid #4c6986;
   }
   .board__tile:hover {
-    background: #eeeeee;
+    background: #DCEDC2;
   }
   
   .board__tile--winner span {
-    color: #23CE6B !important;
+    color: #FF8C94 !important;
+    background: #4c6986
   }
   
   @media only screen and (max-width: 1200px) {
